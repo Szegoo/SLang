@@ -4,10 +4,17 @@ namespace SLang
 {
     class Program
     {
+        public static void PRINT(string komanda)
+        {
+            int ind = komanda.IndexOf(" ");
+            int end = komanda.IndexOf(";");
+            string text = komanda.Substring(ind + 1, (end - ind) - 1);
+            System.Console.WriteLine(text);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Dobrodosao u SLang!");
-            System.Console.WriteLine("komande: PRINT, SUM, DECLARE, :run");
+            System.Console.WriteLine("komande: PRINT, SUM, DECLARE, INPUT :run");
             string komanda = "";
             string[] komande = new string[20];
             int index = 0;
@@ -54,6 +61,36 @@ namespace SLang
                             if (komande[j].Contains(ime))
                             {
                                 komande[j] = komande[j].Replace(ime, vrednost);
+                            }
+                        }
+                        break;
+                    case "INPUT":
+                        ind = komande[i].IndexOf(";");
+                        koms = komande[i].Substring(0, ind).Split(" ");
+                        System.Console.Write($"Unesi {koms[1]}: ");
+                        string s = Console.ReadLine();
+                        for (int j = i; j < index; j++)
+                        {
+                            if (komande[j].Contains(koms[1]))
+                            {
+                                komande[j] = komande[j].Replace(koms[1], s);
+                            }
+                        }
+                        break;
+                    case "IF":
+                        ind = komande[i].IndexOf(";");
+                        koms = komande[i].Substring(0, ind).Split(" ");
+                        if (Convert.ToInt32(koms[1]) == Convert.ToInt32(koms[2]))
+                        {
+                            if (koms[3] == "PRINT")
+                            {
+                                text = koms[3];
+                                for (int m = 4; m < koms.Length; m++)
+                                {
+                                    text += " " + koms[m];
+                                }
+                                text += ";";
+                                PRINT(text);
                             }
                         }
                         break;
