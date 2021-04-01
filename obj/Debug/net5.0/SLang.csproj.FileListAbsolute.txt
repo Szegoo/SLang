@@ -1,0 +1,16 @@
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.exe
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.deps.json
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.runtimeconfig.json
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.runtimeconfig.dev.json
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.dll
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\ref\SLang.dll
+C:\Users\sakac\Desktop\SLang\bin\Debug\net5.0\SLang.pdb
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.csprojAssemblyReference.cache
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.AssemblyInfoInputs.cache
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.AssemblyInfo.cs
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.csproj.CoreCompileInputs.cache
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.dll
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\ref\SLang.dll
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.pdb
+C:\Users\sakac\Desktop\SLang\obj\Debug\net5.0\SLang.genruntimeconfig.cache
