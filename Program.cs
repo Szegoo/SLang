@@ -94,6 +94,9 @@ namespace SLang
                             }
                         }
                         break;
+                    case "GOTO":
+                        PRINT("go to is in development");
+                        break;
                     default:
                         System.Console.WriteLine(komande[i].Substring(0, komande[i].IndexOf(";")) + " - nije definisan!");
                         break;
