@@ -1,7 +1,7 @@
 ﻿# Slang
 
 SLang is an open sourse programming language
-\nFunctions:
+#Functions:
 
 - PRINT
 - SUM
