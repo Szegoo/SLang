@@ -28,6 +28,7 @@ namespace SLang
                     index++;
                 }
             } while (komanda != ":run");
+            int forCounter = 0;
             for (int i = 0; i < index; i++)
             {
                 string kom = komande[i].Split(" ")[0];
@@ -95,9 +96,34 @@ namespace SLang
                         }
                         break;
                     case "GOTO":
-                        PRINT("go to is in development");
-                        PRINT("...");
-                        PRINT("---");
+                        ind = komande[i].IndexOf(";");
+                        koms = komande[i].Substring(0, ind).Split(" ");
+                        string komandAt = komande[Convert.ToInt32(koms[1])];
+
+                        komande[i] = "";
+                        i = Convert.ToInt32(koms[1]);
+                        if(komandAt == "PRINT") {
+                            goto case "PRINT";
+                        }else if(komandAt == "INPUT") {
+                            goto case "INPUT";
+                        }else if(komandAt == "DECLARE") {
+                            goto case "DECLARE";
+                        }else if(komandAt == "SUM") {
+                            goto case "SUM";
+                        }else if(komandAt == "IF") {
+                            goto case "IF";
+                        }
+                        goto default;
+                    case "FOR":
+                        ind = komande[i].IndexOf(";");
+                        koms = komande[i].Substring(0, ind).Split(" ");
+                        if(forCounter == Convert.ToInt32(koms[1]) - 1) {
+                            break;
+                        }
+                        forCounter ++;
+                        i = 0;
+                        goto case "PRINT";
+                    case "": 
                         break;
                     default:
                         System.Console.WriteLine(komande[i].Substring(0, komande[i].IndexOf(";")) + " - nije definisan!");
